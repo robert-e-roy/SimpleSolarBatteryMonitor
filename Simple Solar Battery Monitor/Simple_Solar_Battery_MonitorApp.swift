@@ -11,7 +11,7 @@ import SwiftUI
 struct Simple_Solar_Battery_MonitorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BatteryView()
         }
     }
 }

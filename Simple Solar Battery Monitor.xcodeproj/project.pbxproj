@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		8CF2B77125BE401B0075DE53 /* Simple_Solar_Battery_MonitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF2B77025BE401B0075DE53 /* Simple_Solar_Battery_MonitorApp.swift */; };
-		8CF2B77325BE401B0075DE53 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF2B77225BE401B0075DE53 /* ContentView.swift */; };
+		8CF2B77325BE401B0075DE53 /* BatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF2B77225BE401B0075DE53 /* BatteryView.swift */; };
 		8CF2B77525BE401F0075DE53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CF2B77425BE401F0075DE53 /* Assets.xcassets */; };
 		8CF2B77825BE401F0075DE53 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CF2B77725BE401F0075DE53 /* Preview Assets.xcassets */; };
+		8CF2B78225BE40940075DE53 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8CF2B78125BE40940075DE53 /* Readme.txt */; };
+		8CF2B78E25BF73B90075DE53 /* BatteryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF2B78D25BF73B90075DE53 /* BatteryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8CF2B76D25BE401B0075DE53 /* Simple Solar Battery Monitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Solar Battery Monitor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF2B77025BE401B0075DE53 /* Simple_Solar_Battery_MonitorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Solar_Battery_MonitorApp.swift; sourceTree = "<group>"; };
-		8CF2B77225BE401B0075DE53 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8CF2B77225BE401B0075DE53 /* BatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryView.swift; sourceTree = "<group>"; };
 		8CF2B77425BE401F0075DE53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CF2B77725BE401F0075DE53 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8CF2B77925BE401F0075DE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CF2B78125BE40940075DE53 /* Readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		8CF2B78D25BF73B90075DE53 /* BatteryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				8CF2B77025BE401B0075DE53 /* Simple_Solar_Battery_MonitorApp.swift */,
-				8CF2B77225BE401B0075DE53 /* ContentView.swift */,
+				8CF2B77225BE401B0075DE53 /* BatteryView.swift */,
+				8CF2B78D25BF73B90075DE53 /* BatteryModel.swift */,
+				8CF2B78125BE40940075DE53 /* Readme.txt */,
 				8CF2B77425BE401F0075DE53 /* Assets.xcassets */,
 				8CF2B77925BE401F0075DE53 /* Info.plist */,
 				8CF2B77625BE401F0075DE53 /* Preview Content */,
@@ -126,6 +132,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CF2B78225BE40940075DE53 /* Readme.txt in Resources */,
 				8CF2B77825BE401F0075DE53 /* Preview Assets.xcassets in Resources */,
 				8CF2B77525BE401F0075DE53 /* Assets.xcassets in Resources */,
 			);
@@ -138,7 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CF2B77325BE401B0075DE53 /* ContentView.swift in Sources */,
+				8CF2B78E25BF73B90075DE53 /* BatteryModel.swift in Sources */,
+				8CF2B77325BE401B0075DE53 /* BatteryView.swift in Sources */,
 				8CF2B77125BE401B0075DE53 /* Simple_Solar_Battery_MonitorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
