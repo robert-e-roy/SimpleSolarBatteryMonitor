@@ -7,42 +7,63 @@
 
 import Foundation
 
-struct SetOfBatteries: Codable {
 
-    var batteries = [Battery]()
+
+struct Battery: Codable, Identifiable, Hashable {
+
+    static func == (lhs: Battery, rhs: Battery) -> Bool {
+        lhs.id == rhs.id
+    }
     
-    struct Logs: Codable {
-       let date: Date
-       let voltage: Float
-   }
-     
-    struct Battery: Codable, Identifiable {
-        let name: String
-        let MaxVoltage: Float
-        var logs: [Logs]
-        let id: Int
+    var name: String
+    let MaxVoltage: Float
+    var logs: [Logs]
+    let id: UUID
+    
+    fileprivate init( name: String, MaxVoltage: Float, logs: [Logs], id: UUID ) {
+        self.name = name
+        self.MaxVoltage = MaxVoltage
+        self.logs = logs
+        self.id = id
+    }
+    
+    struct Logs: Codable, Identifiable, Hashable {
+        var date: Date
+        var volts: Float
+        var id: UUID
         
+        fileprivate init( volts: Float) {
+            self.date = Date()
+            self.volts = volts
+            self.id = UUID()
+        }
         
+    }
+    init() {
         
-        fileprivate init( name: String, MaxVoltage: Float, logs: [Logs], id: Int ) {
-            self.name = name
-            self.MaxVoltage = MaxVoltage
-            self.logs = logs
-            self.id = id
+        self.init(name: "name",MaxVoltage: 13.0,logs: [Battery.Logs](),id: UUID())
+    }
+    
+    private var uniqueLogID = 0
+    var json: Data? {
+        return try? JSONEncoder().encode(self)
+    }
+    
+    init?(json: Data?) {
+        if json != nil, let newBattery = try? JSONDecoder().decode(Battery.self, from: json!) {
+            self = newBattery
+        } else {
+            return nil
         }
     }
-    
-private var uniqueID = 0
-    
-var json: Data? {
-    return try? JSONEncoder().encode(self)
-}
-init () {}
-    
-    mutating func addBattery( name: String , MaxVoltage: Float , logs: [Logs], id: Int ) {
-        uniqueID += 1
-        batteries.append( Battery(name: name, MaxVoltage: MaxVoltage, logs: logs, id: id ) )
-        
+    mutating func addVoltageLog(volts: Float){        
+        logs.append(Logs( volts: volts))
     }
-
+    
+    
 }
+
+
+
+
+

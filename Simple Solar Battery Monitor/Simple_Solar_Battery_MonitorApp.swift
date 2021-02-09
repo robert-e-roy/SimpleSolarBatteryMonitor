@@ -10,8 +10,9 @@ import SwiftUI
 @main
 struct Simple_Solar_Battery_MonitorApp: App {
     var body: some Scene {
-        WindowGroup {
-            BatteryView()
+        let store = BatteryStore(named: "Simple Battery Monitor")
+        WindowGroup{
+            BatteryChooserView().environmentObject(store)
         }
     }
 }

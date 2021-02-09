@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C426C3925CE1A49001EE05E /* BatteryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C426C3825CE1A49001EE05E /* BatteryStore.swift */; };
+		8C426C3C25CF3CCC001EE05E /* BatteryDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C426C3B25CF3CCC001EE05E /* BatteryDocumentView.swift */; };
+		8C52AA8425C4C258008A199B /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52AA7D25C4C256008A199B /* GridLayout.swift */; };
+		8C52AA8625C4C258008A199B /* EditableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52AA7F25C4C257008A199B /* EditableText.swift */; };
+		8C52AA8725C4C258008A199B /* OptionalImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52AA8025C4C258008A199B /* OptionalImage.swift */; };
+		8C52AA8825C4C258008A199B /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52AA8125C4C258008A199B /* Grid.swift */; };
+		8C52AA8925C4C258008A199B /* AnimatableSystemFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52AA8225C4C258008A199B /* AnimatableSystemFontModifier.swift */; };
+		8C52AA8A25C4C258008A199B /* Spinning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52AA8325C4C258008A199B /* Spinning.swift */; };
+		8C8832E825D1FFF400BA3A63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C8832E725D1FFF400BA3A63 /* Assets.xcassets */; };
 		8CF2B77125BE401B0075DE53 /* Simple_Solar_Battery_MonitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF2B77025BE401B0075DE53 /* Simple_Solar_Battery_MonitorApp.swift */; };
-		8CF2B77325BE401B0075DE53 /* BatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF2B77225BE401B0075DE53 /* BatteryView.swift */; };
-		8CF2B77525BE401F0075DE53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CF2B77425BE401F0075DE53 /* Assets.xcassets */; };
+		8CF2B77325BE401B0075DE53 /* BatteryChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF2B77225BE401B0075DE53 /* BatteryChooserView.swift */; };
 		8CF2B77825BE401F0075DE53 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CF2B77725BE401F0075DE53 /* Preview Assets.xcassets */; };
 		8CF2B78225BE40940075DE53 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8CF2B78125BE40940075DE53 /* Readme.txt */; };
 		8CF2B78E25BF73B90075DE53 /* BatteryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF2B78D25BF73B90075DE53 /* BatteryModel.swift */; };
@@ -17,10 +25,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C426C3825CE1A49001EE05E /* BatteryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryStore.swift; sourceTree = "<group>"; };
+		8C426C3B25CF3CCC001EE05E /* BatteryDocumentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryDocumentView.swift; sourceTree = "<group>"; };
+		8C52AA7D25C4C256008A199B /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		8C52AA7F25C4C257008A199B /* EditableText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditableText.swift; sourceTree = "<group>"; };
+		8C52AA8025C4C258008A199B /* OptionalImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalImage.swift; sourceTree = "<group>"; };
+		8C52AA8125C4C258008A199B /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		8C52AA8225C4C258008A199B /* AnimatableSystemFontModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableSystemFontModifier.swift; sourceTree = "<group>"; };
+		8C52AA8325C4C258008A199B /* Spinning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spinning.swift; sourceTree = "<group>"; };
+		8C8832E725D1FFF400BA3A63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CF2B76D25BE401B0075DE53 /* Simple Solar Battery Monitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Solar Battery Monitor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF2B77025BE401B0075DE53 /* Simple_Solar_Battery_MonitorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Solar_Battery_MonitorApp.swift; sourceTree = "<group>"; };
-		8CF2B77225BE401B0075DE53 /* BatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryView.swift; sourceTree = "<group>"; };
-		8CF2B77425BE401F0075DE53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8CF2B77225BE401B0075DE53 /* BatteryChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryChooserView.swift; sourceTree = "<group>"; };
 		8CF2B77725BE401F0075DE53 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8CF2B77925BE401F0075DE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CF2B78125BE40940075DE53 /* Readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
@@ -59,11 +75,19 @@
 			isa = PBXGroup;
 			children = (
 				8CF2B77025BE401B0075DE53 /* Simple_Solar_Battery_MonitorApp.swift */,
-				8CF2B77225BE401B0075DE53 /* BatteryView.swift */,
+				8C426C3825CE1A49001EE05E /* BatteryStore.swift */,
+				8CF2B77225BE401B0075DE53 /* BatteryChooserView.swift */,
 				8CF2B78D25BF73B90075DE53 /* BatteryModel.swift */,
 				8CF2B79025BF7EEC0075DE53 /* BatteryViewModel.swift */,
+				8C426C3B25CF3CCC001EE05E /* BatteryDocumentView.swift */,
 				8CF2B78125BE40940075DE53 /* Readme.txt */,
-				8CF2B77425BE401F0075DE53 /* Assets.xcassets */,
+				8C8832E725D1FFF400BA3A63 /* Assets.xcassets */,
+				8C52AA8225C4C258008A199B /* AnimatableSystemFontModifier.swift */,
+				8C52AA7F25C4C257008A199B /* EditableText.swift */,
+				8C52AA8125C4C258008A199B /* Grid.swift */,
+				8C52AA7D25C4C256008A199B /* GridLayout.swift */,
+				8C52AA8025C4C258008A199B /* OptionalImage.swift */,
+				8C52AA8325C4C258008A199B /* Spinning.swift */,
 				8CF2B77925BE401F0075DE53 /* Info.plist */,
 				8CF2B77625BE401F0075DE53 /* Preview Content */,
 			);
@@ -136,8 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CF2B78225BE40940075DE53 /* Readme.txt in Resources */,
+				8C8832E825D1FFF400BA3A63 /* Assets.xcassets in Resources */,
 				8CF2B77825BE401F0075DE53 /* Preview Assets.xcassets in Resources */,
-				8CF2B77525BE401F0075DE53 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,8 +174,16 @@
 			files = (
 				8CF2B79125BF7EEC0075DE53 /* BatteryViewModel.swift in Sources */,
 				8CF2B78E25BF73B90075DE53 /* BatteryModel.swift in Sources */,
-				8CF2B77325BE401B0075DE53 /* BatteryView.swift in Sources */,
+				8C426C3C25CF3CCC001EE05E /* BatteryDocumentView.swift in Sources */,
+				8C52AA8425C4C258008A199B /* GridLayout.swift in Sources */,
+				8C52AA8625C4C258008A199B /* EditableText.swift in Sources */,
+				8CF2B77325BE401B0075DE53 /* BatteryChooserView.swift in Sources */,
 				8CF2B77125BE401B0075DE53 /* Simple_Solar_Battery_MonitorApp.swift in Sources */,
+				8C52AA8A25C4C258008A199B /* Spinning.swift in Sources */,
+				8C426C3925CE1A49001EE05E /* BatteryStore.swift in Sources */,
+				8C52AA8725C4C258008A199B /* OptionalImage.swift in Sources */,
+				8C52AA8925C4C258008A199B /* AnimatableSystemFontModifier.swift in Sources */,
+				8C52AA8825C4C258008A199B /* Grid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
