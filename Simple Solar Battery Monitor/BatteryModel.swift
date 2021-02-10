@@ -7,21 +7,17 @@
 
 import Foundation
 
-
-
 struct Battery: Codable, Identifiable, Hashable {
 
     static func == (lhs: Battery, rhs: Battery) -> Bool {
         lhs.id == rhs.id
     }
     
-    var name: String
     let MaxVoltage: Float
     var logs: [Logs]
     let id: UUID
     
-    fileprivate init( name: String, MaxVoltage: Float, logs: [Logs], id: UUID ) {
-        self.name = name
+    fileprivate init( MaxVoltage: Float, logs: [Logs], id: UUID ) {
         self.MaxVoltage = MaxVoltage
         self.logs = logs
         self.id = id
@@ -30,18 +26,17 @@ struct Battery: Codable, Identifiable, Hashable {
     struct Logs: Codable, Identifiable, Hashable {
         var date: Date
         var volts: Float
-        var id: UUID
+        var id: Int
         
-        fileprivate init( volts: Float) {
+        fileprivate init( volts: Float, id: Int) {
             self.date = Date()
             self.volts = volts
-            self.id = UUID()
+            self.id = id
         }
-        
     }
+
     init() {
-        
-        self.init(name: "name",MaxVoltage: 13.0,logs: [Battery.Logs](),id: UUID())
+        self.init(MaxVoltage: 13.0,logs: [Battery.Logs](),id: UUID() )
     }
     
     private var uniqueLogID = 0
@@ -56,14 +51,18 @@ struct Battery: Codable, Identifiable, Hashable {
             return nil
         }
     }
-    mutating func addVoltageLog(volts: Float){        
-        logs.append(Logs( volts: volts))
+  
+    private var uniqueLogId = 0
+    
+    mutating func addVoltageLog(volts: Float){
+        logs.append(Logs( volts: volts, id: uniqueLogId))
+        uniqueLogId += 1
+
+    }
+    mutating func removeVoltageLog(log: Battery.Logs){
+        if let chosenIndex = logs.firstIndex(of: log) {
+            logs.remove(at: chosenIndex)
+        }
     }
     
-    
 }
-
-
-
-
-

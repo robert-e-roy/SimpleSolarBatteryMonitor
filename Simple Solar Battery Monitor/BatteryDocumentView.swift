@@ -14,8 +14,7 @@ struct BatteryDocumentView: View {
     @State private var editMode: EditMode = .inactive
     @State private var addLogValue: String = ""
     @State private var isEditing = false
-
-
+    
     init(battery: BatteryDocument) {
         self.battery = battery
     }
@@ -24,9 +23,7 @@ struct BatteryDocumentView: View {
         VStack {
             HStack {
                 ScrollView(.vertical){
-                    //
                     HStack{
-                        Text ( "Name: \(battery.name)")
                         let maxvolts = String(format: "%.2f", battery.maxVolts)
                         Text ( " Voltage: \(maxvolts)")
                     }
@@ -36,12 +33,15 @@ struct BatteryDocumentView: View {
                         let color = percent(current: log.volts ,max: battery.maxVolts)
                         
                         HStack {
-                           // Text ( "Entry: \(log.id) ")
                             Text( "\(voltage)" )
                             Text( " On: \(date)" )
                            // Text( " Percent : \(percent)" )
-
                         }.background(color)
+                        .onLongPressGesture {
+                            if self.editMode.isEditing {
+                                battery.removeVoltageLog(log: log)
+                            }
+                        }
                     }
                     TextField("new measurement" , text: $addLogValue)
                             { isEditing in
@@ -57,20 +57,16 @@ struct BatteryDocumentView: View {
             }
         
         }
+        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
         .navigationBarItems(
             trailing: EditButton()
         )
         .environment(\.editMode, $editMode)
 
     }
-
-    func addVoltageLog(volts: Float) {
-        self.battery.addVoltageLog(volts:volts)
-    }
 }
 func LogDate ( date:Date) -> String {
     let df = DateFormatter()
-
     df.setLocalizedDateFormatFromTemplate("MMMdd HH:mm")
     return df.string(from: date)
     }
@@ -78,6 +74,7 @@ func LogDate ( date:Date) -> String {
 func percent ( current: Float, max: Float) -> Color {
     
     let percent = (current - 12) / (max - 12) * 100
+    print ("percent \(percent)")
     if percent > 60 {
         return Color.green
     }

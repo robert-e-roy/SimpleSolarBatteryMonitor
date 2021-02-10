@@ -15,7 +15,7 @@ class BatteryDocument: ObservableObject, Hashable, Identifiable
             objectWillChange.send()
         }
         didSet {
-            UserDefaults.standard.set(battery.json, forKey: battery.name)
+            UserDefaults.standard.set(battery.json, forKey: battery.id.uuidString)
         }
     }
 
@@ -28,10 +28,6 @@ class BatteryDocument: ObservableObject, Hashable, Identifiable
         get {battery.MaxVoltage}
     }
     
-    var name: String {
-        get {battery.name}
-        set {battery.name = newValue}
-    }
     var logs: [Battery.Logs] {
         get {
             battery.logs
@@ -54,7 +50,10 @@ class BatteryDocument: ObservableObject, Hashable, Identifiable
     }
     //Mark: -- Intents
     func addVoltageLog(volts: Float) {
-        print (volts)
         battery.addVoltageLog(volts: volts)
-            }
+    }
+    
+    func removeVoltageLog( log: Battery.Logs) {
+        battery.removeVoltageLog(log: log)
+    }
 }

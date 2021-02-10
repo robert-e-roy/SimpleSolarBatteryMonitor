@@ -7,12 +7,9 @@
 
 import SwiftUI
 
-
 struct BatteryChooserView: View {
     @EnvironmentObject var store: BatteryStore
-    
     @State private var editMode: EditMode = .inactive
-    
     
     var body: some View {
         NavigationView {            List {
