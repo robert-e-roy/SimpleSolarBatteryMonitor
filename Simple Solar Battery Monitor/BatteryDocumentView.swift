@@ -27,7 +27,6 @@ struct BatteryDocumentView: View {
             }
             
             ScrollView(.vertical){
-                
                 ForEach (battery.logs ) { log in
                     let voltage = String(format: "%.2f", log.volts)
                     let date = LogDate(date: log.date)
@@ -71,7 +70,7 @@ func LogDate ( date:Date) -> String {
     df.setLocalizedDateFormatFromTemplate("MMMdd HH:mm")
     return df.string(from: date)
     }
-enum cellVoltage: Float {
+enum cellVoltage: Float { // 6 cell lead acid battery
     case hundred = 12.6
     case ninty = 12.5
     case eighty = 12.42
