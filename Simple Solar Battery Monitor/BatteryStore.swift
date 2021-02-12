@@ -14,7 +14,7 @@ class BatteryStore: ObservableObject
     
     func name(for battery: BatteryDocument) -> String {
         if batteryNames[battery] == nil {
-            batteryNames[battery] = "Untitled0"
+            batteryNames[battery] = "Untitled"
         }
         return batteryNames[battery]!
     }
@@ -27,7 +27,7 @@ class BatteryStore: ObservableObject
         batteryNames.keys.sorted { batteryNames[$0]! < batteryNames[$1]! }
     }
     
-    func addBattery(named name: String = "Untitled1") {
+    func addBattery(named name: String = "Untitled") {
         batteryNames[BatteryDocument()] = name
     }
 

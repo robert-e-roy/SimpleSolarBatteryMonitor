@@ -40,6 +40,5 @@ struct BatteryChooserView: View {
             .environment(\.editMode, $editMode)
         }
     }
-        
 }
 
