@@ -23,9 +23,9 @@ class BatteryDocument: ObservableObject, Hashable, Identifiable
         lhs.id == rhs.id
     }
     let id: UUID
-    
     var  maxVolts: Float {
         get {battery.MaxVoltage}
+        set {battery.MaxVoltage = newValue}
     }
     
     var logs: [Battery.Logs] {
@@ -52,6 +52,7 @@ class BatteryDocument: ObservableObject, Hashable, Identifiable
     func addVoltageLog(volts: Float) {
         battery.addVoltageLog(volts: volts)
     }
+    
     
     func removeVoltageLog( log: Battery.Logs) {
         battery.removeVoltageLog(log: log)

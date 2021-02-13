@@ -13,7 +13,8 @@ struct Battery: Codable, Identifiable, Hashable {
         lhs.id == rhs.id
     }
     
-    let MaxVoltage: Float
+    var MaxVoltage: Float    // make this cell number with a picker
+
     var logs: [Logs]
     let id: UUID
     
@@ -57,12 +58,14 @@ struct Battery: Codable, Identifiable, Hashable {
     mutating func addVoltageLog(volts: Float){
         logs.append(Logs( volts: volts, id: uniqueLogId))
         uniqueLogId += 1
-
     }
     mutating func removeVoltageLog(log: Battery.Logs){
         if let chosenIndex = logs.firstIndex(of: log) {
             logs.remove(at: chosenIndex)
         }
+    }
+    mutating func changeMax(volts: Float){
+        self.MaxVoltage = volts
     }
     
 }
