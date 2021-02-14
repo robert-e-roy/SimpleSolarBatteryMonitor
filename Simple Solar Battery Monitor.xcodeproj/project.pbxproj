@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C09FC1D25D9CE0500E04EB0 /* pickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C09FC1C25D9CE0500E04EB0 /* pickerView.swift */; };
 		8C426C3925CE1A49001EE05E /* BatteryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C426C3825CE1A49001EE05E /* BatteryStore.swift */; };
 		8C426C3C25CF3CCC001EE05E /* BatteryDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C426C3B25CF3CCC001EE05E /* BatteryDocumentView.swift */; };
 		8C52AA8625C4C258008A199B /* EditableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52AA7F25C4C257008A199B /* EditableText.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C09FC1C25D9CE0500E04EB0 /* pickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pickerView.swift; sourceTree = "<group>"; };
 		8C426C3825CE1A49001EE05E /* BatteryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryStore.swift; sourceTree = "<group>"; };
 		8C426C3B25CF3CCC001EE05E /* BatteryDocumentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryDocumentView.swift; sourceTree = "<group>"; };
 		8C52AA7F25C4C257008A199B /* EditableText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditableText.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				8CF2B78D25BF73B90075DE53 /* BatteryModel.swift */,
 				8CF2B79025BF7EEC0075DE53 /* BatteryViewModel.swift */,
 				8C426C3B25CF3CCC001EE05E /* BatteryDocumentView.swift */,
+				8C09FC1C25D9CE0500E04EB0 /* pickerView.swift */,
 				8CF2B78125BE40940075DE53 /* Readme.txt */,
 				8C8832E725D1FFF400BA3A63 /* Assets.xcassets */,
 				8C52AA7F25C4C257008A199B /* EditableText.swift */,
@@ -166,6 +169,7 @@
 				8C52AA8625C4C258008A199B /* EditableText.swift in Sources */,
 				8CF2B77325BE401B0075DE53 /* BatteryChooserView.swift in Sources */,
 				8CF2B77125BE401B0075DE53 /* Simple_Solar_Battery_MonitorApp.swift in Sources */,
+				8C09FC1D25D9CE0500E04EB0 /* pickerView.swift in Sources */,
 				8C426C3925CE1A49001EE05E /* BatteryStore.swift in Sources */,
 				8C52AA8725C4C258008A199B /* OptionalImage.swift in Sources */,
 			);

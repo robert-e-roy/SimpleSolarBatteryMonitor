@@ -10,6 +10,7 @@ import Combine
 
 class BatteryDocument: ObservableObject, Hashable, Identifiable
 {
+
     @Published var battery: Battery {
         willSet {
             objectWillChange.send()
@@ -52,7 +53,6 @@ class BatteryDocument: ObservableObject, Hashable, Identifiable
     func addVoltageLog(volts: Float) {
         battery.addVoltageLog(volts: volts)
     }
-    
     
     func removeVoltageLog( log: Battery.Logs) {
         battery.removeVoltageLog(log: log)
