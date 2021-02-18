@@ -11,46 +11,41 @@ import SwiftUI
 struct BatteryDocumentView: View {
     @ObservedObject var battery: BatteryDocument
     @State  var selectedNominalVoltageIndex = 0
-
     @State private var editMode: EditMode = .inactive
     @State private var addLogValue: String = ""
-    @State private var newMaxValue: String = ""
-    
     @State private var isEditing = false
     
     init(battery: BatteryDocument) {
         self.battery = battery
         selectedNominalVoltageIndex = Int ( (battery.maxVolts / 6) - 1)
     }
-
     
     var body: some View {
         let nominalVoltage = ["6", "12", "24", "48"]
-
+        
         Group {
             if editMode == .active {
                 pickerView(nominalVoltage:nominalVoltage, share: $selectedNominalVoltageIndex)
                     .onDisappear( perform: {updateMax(max:nominalVoltage[selectedNominalVoltageIndex])} )
             } else {
-            Text("Your nominalVoltage: \(battery.maxVolts)")
-        }
-      
+                let maxVolts = String(format: "%.2f", battery.maxVolts)
+                Text("Your nominalVoltage: \(maxVolts)")
+            }
+            
             ScrollView(.vertical) {
                 ForEach (battery.logs ) { log in
                     let voltage = String(format: "%.2f", log.volts)
                     let date = LogDate(date: log.date)
                     let (color,percent) = percent(measuremnt: log.volts ,max: battery.maxVolts)
                     let percentString = String(format: "%.0f", percent)
-                    HStack {
-                        Text( "\(voltage)" )
-                        Text( " On: \(date)" )
-                        Text( " \(percentString) %" )
-                    }.background(color)
-                    .onLongPressGesture {
-                        if self.editMode.isEditing {
-                            battery.removeVoltageLog(log: log)
+                    
+                    Text( "\(voltage)  On: \(date) \(percentString) %" )
+                        .background(color)
+                        .onLongPressGesture {
+                            if self.editMode.isEditing {
+                                battery.removeVoltageLog(log: log)
+                            }
                         }
-                    }
                 }
                 TextField("new measurement" , text: $addLogValue)
                 { isEditing in

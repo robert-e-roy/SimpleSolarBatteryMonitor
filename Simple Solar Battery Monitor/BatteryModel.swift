@@ -37,7 +37,7 @@ struct Battery: Codable, Identifiable, Hashable {
     }
 
     init() {
-        self.init(MaxVoltage: 13.0,logs: [Battery.Logs](),id: UUID() )
+        self.init(MaxVoltage: 12.0,logs: [Battery.Logs](),id: UUID() )
     }
     
     private var uniqueLogID = 0
